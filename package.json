@@ -1,7 +1,7 @@
 {
 	"name": "kursor-cli",
 	"version": "0.0.1",
-	"description": "Toogle the CLI cursor",
+	"description": "Toggle the CLI cursor",
 	"type": "module",
 	"exports": {
 		".": {

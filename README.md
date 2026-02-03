@@ -1,6 +1,6 @@
 # kursor-cli
 
-Toogle the CLI cursor. Like [`cli-cursor`](https://github.com/sindresorhus/cli-cursor).
+Toggle the CLI cursor. Like [`cli-cursor`](https://github.com/sindresorhus/cli-cursor).
 
 ## Install
 
