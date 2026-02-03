@@ -5,7 +5,7 @@ export function createCliCursor(stream?: NodeJS.WriteStream) {
 	stream ??= process.stdout;
 
 	let isHidden = false;
-	let setuped = false;
+	let isAdded = false;
 
 	// https://github.com/sindresorhus/cli-cursor/blob/main/index.js
 	const methods = {
@@ -22,8 +22,8 @@ export function createCliCursor(stream?: NodeJS.WriteStream) {
 				return;
 			}
 
-			if (!setuped) {
-				setuped = true;
+			if (!isAdded) {
+				isAdded = true;
 				whenExit(methods.show);
 			}
 
