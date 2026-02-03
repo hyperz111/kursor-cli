@@ -1,0 +1,38 @@
+{
+	"name": "kursor-cli",
+	"version": "0.0.1",
+	"description": "Toogle the CLI cursor",
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		}
+	},
+	"scripts": {
+		"format": "prettier -w .",
+		"types": "tsc --noEmit",
+		"build": "tsc",
+		"prepublishOnly": "pnpm run build"
+	},
+	"files": [
+		"dist"
+	],
+	"keywords": [],
+	"author": "Hyper-Z11 (https://github.com/hyperz111)",
+	"license": "MIT",
+	"repository": "https://github.com/hyperz111/kursor-cli.git",
+	"packageManager": "pnpm@10.15.0",
+	"devDependencies": {
+		"@hyperz111/prettier-config": "^1.0.3",
+		"@hyperz111/tsconfig": "^0.1.0",
+		"@types/node": "^25.1.0",
+		"cli-cursor": "^5.0.0",
+		"prettier": "^3.6.2",
+		"typescript": "^5.9.2",
+		"uvu": "^0.5.6"
+	},
+	"dependencies": {
+		"when-exit": "^2.1.5"
+	}
+}
