@@ -13,6 +13,7 @@
 		"format": "prettier -w .",
 		"types": "tsc --noEmit",
 		"build": "tsc",
+		"test": "node --test",
 		"prepublishOnly": "pnpm run build"
 	},
 	"files": [
