@@ -31,7 +31,7 @@ export function createCliCursor(stream?: NodeJS.WriteStream) {
 			stream.write("\u001B[?25l");
 		},
 		toggle(force?: boolean) {
-			if (force !== undefined) {
+			if (typeof force === "boolean") {
 				isHidden = force;
 			}
 
