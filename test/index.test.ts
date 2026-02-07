@@ -1,4 +1,3 @@
-import process from "node:process";
 import { deepEqual } from "node:assert";
 import { beforeEach, describe, test } from "node:test";
 import { createCliCursor } from "../src/index.ts";
