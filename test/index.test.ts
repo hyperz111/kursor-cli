@@ -1,11 +1,16 @@
 import { deepEqual } from "node:assert";
 import { beforeEach, describe, test } from "node:test";
+// @ts-ignore
 import { createCliCursor } from "../src/index.ts";
-import { Writable } from "node:stream";
+import { WriteStream } from "node:tty";
 
-class MockWritable extends Writable {
+class MockWritable extends WriteStream {
 	public buffer: string[] = [];
 	public isTTY = true;
+
+	constructor() {
+		super(1);
+	}
 
 	_write(chunk: any, _encoding: BufferEncoding, callback: (error?: Error | null | undefined) => void): void {
 		this.buffer.push(chunk.toString());
@@ -22,7 +27,7 @@ const HIDE = "\u001B[?25l";
 
 describe("basic", () => {
 	let output: MockWritable;
-	let cliCursor: ReturnType<createCliCursor>;
+	let cliCursor: ReturnType<typeof createCliCursor>;
 
 	beforeEach(() => {
 		output = new MockWritable();
@@ -42,7 +47,7 @@ describe("basic", () => {
 
 describe("toggler", () => {
 	let output: MockWritable;
-	let cliCursor: ReturnType<createCliCursor>;
+	let cliCursor: ReturnType<typeof createCliCursor>;
 
 	beforeEach(() => {
 		output = new MockWritable();
