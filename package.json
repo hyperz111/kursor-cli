@@ -12,7 +12,7 @@
 	"scripts": {
 		"format": "prettier -w .",
 		"types": "tsc --noEmit",
-		"build": "tsc",
+		"build": "tsc -p tsconfig.build.json",
 		"test": "node --test",
 		"prepublishOnly": "pnpm run build"
 	},
@@ -31,7 +31,7 @@
 	"packageManager": "pnpm@10.15.0",
 	"devDependencies": {
 		"@hyperz111/prettier-config": "^1.0.3",
-		"@hyperz111/tsconfig": "^0.1.0",
+		"@hyperz111/tsconfig": "^1.0.0",
 		"@types/node": "^25.1.0",
 		"cli-cursor": "^5.0.0",
 		"prettier": "^3.6.2",
